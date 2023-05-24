@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Stack Bank</title>
+    <!-- MDB icon -->
+    <link rel="icon" href="assets/img/stack_logo.png" type="image/x-icon" />
+    
+    <!-- Font Awesome -->
+    
+    
+    <link rel="stylesheet" href="assets/css/mdb.min.css" />
+    <link rel="stylesheet" href="assets/css/mdb.dark.css" />
+    <link rel="stylesheet" href="assets/css/font-awesome.css" />
+    
+   <style>
+     *{
+       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     }
+     body{
+       background-image: url("assets/img/bgg.jpg");
+       background-attachment: fixed;
+       background-position: center center;
+       background-size: cover;
+       background-repeat: no-repeat;
+     }
+     .square{
+    width: 25em; 
+    height: 35em; 
+    background: rgba(0, 0, 0, 0.4);
+    box-shadow: 0 8px 32px 0 rgb(0, 0, 0);
+    backdrop-filter: blur(8.5px);
+    -webkit-backdrop-filter: blur(8.5px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    text-align: center;
+    margin-top: 3em;
+}
+h4{
+margin-top: 1em;
+color: white;
+text-decoration-color:  rgb(0, 195, 255);
+text-decoration-line: underline;
+}
+     .form-control{
+  border-radius: 0;
+  background:#e0e0e0;
+  box-shadow: 20px 20px 60px #bebebe
+  -20px -20px -60px #ffffffff;
+  border-radius: 10em;
+  border-bottom:1px solid white ;
+  box-shadow: none;
+  -webkit-box-shadow:none;
+  width: 18em;
+
+}
+
+.form-control::-webkit-input-placeholder{
+  color: rgb(136, 136, 136);
+}
+
+.popup{
+      width: 300px;
+      height: auto;
+      border-radius: 6px;
+      position: absolute;
+      transform: translate(-50%, -50%) scale(0.1);
+      text-align: center;
+      top: 0;
+      left: 50%;
+      padding:0 30px 30px;
+      border-radius: 10px;
+       background: rgba(126, 126, 126, 0.938);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      visibility: hidden;
+      transition: transform 0.4s top 0.4s;
+    }
+    .popup i{
+      width: 50px;
+      margin-top: -50%;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    .popup button{
+      width: 20em;
+    }
+    i.fa-times{
+      animation: animate 3s linear infinite;
+      text-shadow: 0 0 50px #ffffff;
+      font-size: 3em;
+      background-color: rgb(0, 195, 255);
+      border-radius: 2em;
+    }
+    .open-popup{
+      visibility: visible;
+      top: 50%;
+      transform: translate(-50%, -50%) scale(1);
+
+    }
+    .open-popup2{
+      visibility: visible;
+      top: 50%;
+      transform: translate(-50%, -50%) scale(1);
+
+    }
+    .open-popup3{
+      visibility: visible;
+      top: 50%;
+      transform: translate(-50%, -50%) scale(1);
+
+    }
+   </style>
+   
+  </head>
+  <body>
+    <!-- Start your project here-->
+    <div class="container h-100 d-flex align-items-center justify-content-end">
+      <div class="square">
+          <img style="width: 10em; margin-top: 0.5em;" src="assets/img/stack.png">
+  <h4>Sign up</h4>
+  
+  <div class="container h-100 d-flex align-items-center justify-content-center">
+       <form class="form-horizontal" id="form" name="myForm" role="form" action="#">
+        <div class="form-group" style="margin-top: -8em;">
+        <input type="text" class="form-control" id="first Name" placeholder="First Name" name="name">
+        </div>
+        <div class="form-group" style="margin-top: 1.5em;">
+        <input type="text" class="form-control" id="last Name" placeholder="Last Name" name="name1">
+        </div>
+          <div class="form-group" style="margin-top: 1.5em;">
+            <input type="email" class="form-control" id="Email" placeholder="Email" name="name2">
+            </div>
+            <div class="form-group"style="margin-top: 1.5em;">
+              <input type="password" class="form-control" id="Password" placeholder="Password" name="name3">
+              </div>
+        <div class="form-group" style="margin-top: 1em;">
+        <div class="col-sm-offset-2">
+        <div class="checkbox">
+        <label>
+        <input type="checkbox"> Remember me
+        </label>
+        </div>
+        </div>
+        </div>
+        <div class="form-group" style="margin-top: 1em;">
+            <a href="#">
+        <button type="submit" class="btn btn-info" onclick="validate()">Sign up 
+          <i class="fa fa-chevron-right"></i>
+        </button></a>
+        </div>
+        <small>Already have an account? <a href="sign-in.html">login</a></small>
+        <div class="form-group" style="margin-top: 1em;">
+          Sign up with
+          <p> 
+              <a href="#"><i class="fa fa-envelope" style="color: rgb(0, 195, 255); font-size: 1.2em;"></i></a>
+            &nbsp;
+            &nbsp;
+            &nbsp;
+          
+            <a href="#"><i class="fa fa-facebook soc" style="color: rgb(0, 195, 255);  font-size: 1.2em;"></i></a>
+            &nbsp;
+            &nbsp;
+            &nbsp;
+
+           <a href="#"><i class="fa fa-instagram soc" style="color: rgb(0, 195, 255);  font-size: 1.2em;"></i></a>
+          </p>
+         </div>
+        </form>
+      </div>
+    </div>
+    </div>
+
+
+    <div class="container h-100 justify-content-center align-items-center">
+        <div class="popup" id="popup">
+          <i class="fa fa-times"></i>
+          <p style="margin-top: 2em; color: white;"><h3>Sorry!</h3><br>
+           Please Provide a Name.</p>
+          
+        </div>
+      </div>
+
+      <div class="container h-100 justify-content-center align-items-center">
+        <div class="popup" id="popup3">
+          <i class="fa fa-times"></i>
+          <p style="margin-top: 2em; color: white;"><h3>Sorry!</h3><br>
+           Please Check Your Password.</p>
+          
+        </div>
+      </div>
+    <!-- End your project here-->
+
+    <!-- MDB -->
+    <script type="text/javascript" src="assets/js/mdb.min.js"></script>
+    <!-- Custom scripts -->
+    <script type="text/javascript">
+        
+        function validate()
+{
+    if( document.myForm.name.value == "" )
+{
+    popup.classList.add("open-popup")
+
+if(popup.classList.contains("open-popup"))
+ window.setTimeout(() => popup.classList.remove("open-popup"), 3000);
+
+document.myForm.Zip.focus() ;
+return false;
+}
+
+if( document.myForm.name3.value == "" ||
+isNaN( document.myForm.name3.value ) ||
+document.myForm.name3.value.length != 5 )
+{
+    popup3.classList.add("open-popup3")
+
+if(popup3.classList.contains("open-popup3"))
+ window.setTimeout(() => popup2.classList.remove("open-popup3"), 3000);
+
+document.myForm.Zip.focus() ;
+return false;
+}
+return( true );
+}
+    </script>
+  </body>
+</html>
